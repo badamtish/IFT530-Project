@@ -8,7 +8,7 @@ CREATE TABLE [dbo].[InventoryTracker]
 [DateOfReturn] [date] NULL
 ) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[InventoryTracker] ADD CONSTRAINT [FK_InventoryTrackerIndividualID] FOREIGN KEY ([IndividualID]) REFERENCES [dbo].[Individual] ([IndividualID])
+ALTER TABLE [dbo].[InventoryTracker] ADD CONSTRAINT [fk_InventoryTracker_InventoryList] FOREIGN KEY ([ItemID]) REFERENCES [dbo].[InventoryList] ([ItemID])
 GO
-ALTER TABLE [dbo].[InventoryTracker] ADD CONSTRAINT [FK_InventoryTrackerItemID] FOREIGN KEY ([ItemID]) REFERENCES [dbo].[InventoryList] ([ItemID])
+ALTER TABLE [dbo].[InventoryTracker] ADD CONSTRAINT [FK_InventoryTrackerIndividualID] FOREIGN KEY ([IndividualID]) REFERENCES [dbo].[Individual] ([IndividualID])
 GO
