@@ -1,0 +1,7 @@
+INSERT INTO dbo.Roles ( Title )
+VALUES  
+	('Player'),
+	('Coach'),
+	('SupportStaff'),
+	('Manager')
+GO
