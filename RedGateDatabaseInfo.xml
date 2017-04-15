@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DatabaseInformation Version="2">
   <ScriptFileEncoding>UTF8</ScriptFileEncoding>
-  <DefaultCollation>
-  </DefaultCollation>
+  <DefaultCollation>Latin1_General_CI_AI</DefaultCollation>
   <DefaultSchema>dbo</DefaultSchema>
   <DefaultUser>dbo</DefaultUser>
   <DefaultFilegroup>PRIMARY</DefaultFilegroup>

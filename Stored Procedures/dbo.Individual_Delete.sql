@@ -1,0 +1,17 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+
+CREATE PROCEDURE [dbo].[Individual_Delete]
+@IndividualID INT
+AS
+BEGIN
+	BEGIN TRY 
+		DELETE FROM dbo.Individual WHERE IndividualID = @IndividualID
+	END TRY 
+	BEGIN CATCH
+		THROW
+	END CATCH
+END
+GO
