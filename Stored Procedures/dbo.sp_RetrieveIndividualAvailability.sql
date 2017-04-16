@@ -3,7 +3,7 @@ GO
 SET ANSI_NULLS ON
 GO
 
-CREATE PROC [dbo].[sp_IndividualAvailability]
+CREATE PROC [dbo].[sp_RetrieveIndividualAvailability]
 	@IndividualID VARCHAR(30),
 	@RoleID INT,
 	@CoachID INT --To reduce confusion between individualid and coachid
