@@ -2,7 +2,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-create procedure [dbo].[TeamCoach_insert]
+create procedure [dbo].[sp_TeamCoach_insert]
 @individualid Int,
 @teamID int
 as begin

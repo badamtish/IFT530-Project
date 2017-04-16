@@ -2,7 +2,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-create procedure [dbo].[Stats_insert]
+create procedure [dbo].[sp_Stats_insert]
 @individualid Int,
 @goals int,
 @notraining int,

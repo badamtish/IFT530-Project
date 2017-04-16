@@ -2,7 +2,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-create procedure [dbo].[Teams_insert]
+create procedure [dbo].[sp_Teams_insert]
 @teamID int,
 @name varchar(20)
 as begin
