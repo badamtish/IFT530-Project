@@ -2,7 +2,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-create procedure [dbo].[Performance_insert]
+create procedure [dbo].[sp_Performance_insert]
 @individualID Int,
 @coachID int,
 @comments varchar(500),

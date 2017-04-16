@@ -2,7 +2,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-create procedure [dbo].[Roles_insert]
+create procedure [dbo].[sp_Roles_insert]
 @roleid Int,
 @title varchar(20)
 as begin

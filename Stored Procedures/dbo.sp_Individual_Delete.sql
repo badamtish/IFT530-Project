@@ -3,7 +3,7 @@ GO
 SET ANSI_NULLS ON
 GO
 
-CREATE PROCEDURE [dbo].[Individual_Delete]
+CREATE PROCEDURE [dbo].[sp_Individual_Delete]
 @IndividualID INT
 AS
 BEGIN

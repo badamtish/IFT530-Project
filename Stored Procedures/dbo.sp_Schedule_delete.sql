@@ -2,7 +2,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-create procedure [dbo].[Schedule_delete]
+create procedure [dbo].[sp_Schedule_delete]
 @matchID Int
 as 
 begin

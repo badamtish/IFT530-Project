@@ -2,7 +2,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-create procedure [dbo].[Schedule_insert]
+create procedure [dbo].[sp_Schedule_insert]
 @matchID Int,
 @opponentID int,
 @matchtype char(1),

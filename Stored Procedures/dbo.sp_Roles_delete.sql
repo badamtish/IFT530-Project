@@ -2,7 +2,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-create procedure [dbo].[Roles_delete]
+create procedure [dbo].[sp_Roles_delete]
 @roleid Int
 as 
 begin
