@@ -4,13 +4,13 @@ SET ANSI_NULLS ON
 GO
 create procedure [dbo].[sp_Schedule_insert]
 @matchID Int,
-@opponentID int,
-@matchtype char(1),
+@opponent VARCHAR(50),
+@typeID char(1),
 @matchdate datetime
 as 
 begin
 set NOCOUNT on
-insert into dbo.schedules (MatchID ,OpponentTeamID ,MatchType , MatchDate )
-values (@matchid ,@opponentid ,@matchtype , @matchdate )
+insert into dbo.schedules (MatchID ,OpponentTeam ,TypeID , MatchDate )
+values (@matchid ,@opponent ,@typeID , @matchdate )
 end
 GO
