@@ -33,3 +33,5 @@ ALTER TABLE [dbo].[Individual] ADD CONSTRAINT [pk_IndividualID] PRIMARY KEY CLUS
 GO
 ALTER TABLE [dbo].[Individual] ADD CONSTRAINT [fk_Individual_Teams] FOREIGN KEY ([TeamID]) REFERENCES [dbo].[Teams] ([TeamID])
 GO
+GRANT UPDATE ON  [dbo].[Individual] TO [dbrole_Player]
+GO

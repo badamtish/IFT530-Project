@@ -15,4 +15,7 @@ BEGIN
 	JOIN dbo.InventoryTracker ON InventoryTracker.ItemID = InventoryList.ItemID
 	WHERE IndividualID = @IndividualID
 END 
+
+GO
+GRANT EXECUTE ON  [dbo].[sp_PlayerInventory] TO [dbrole_Player]
 GO

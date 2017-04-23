@@ -9,3 +9,9 @@ CREATE TABLE [dbo].[Stats]
 GO
 ALTER TABLE [dbo].[Stats] ADD CONSTRAINT [fk_Stats_Individual] FOREIGN KEY ([IndividualID]) REFERENCES [dbo].[Individual] ([IndividualID])
 GO
+GRANT INSERT ON  [dbo].[Stats] TO [dbrole_Coach]
+GO
+GRANT DELETE ON  [dbo].[Stats] TO [dbrole_Coach]
+GO
+GRANT UPDATE ON  [dbo].[Stats] TO [dbrole_Coach]
+GO

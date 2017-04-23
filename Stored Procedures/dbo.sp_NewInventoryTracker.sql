@@ -20,4 +20,7 @@ BEGIN
 		THROW 
 	END CATCH 
 END
+
+GO
+GRANT EXECUTE ON  [dbo].[sp_NewInventoryTracker] TO [dbrole_Player]
 GO

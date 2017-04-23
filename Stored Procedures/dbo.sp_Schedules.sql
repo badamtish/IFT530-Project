@@ -9,4 +9,7 @@ BEGIN
 	FROM dbo.Schedules
 	JOIN dbo.MatchType ON MatchType.TypeID = Schedules.TypeID
 END 
+
+GO
+GRANT EXECUTE ON  [dbo].[sp_Schedules] TO [dbrole_Coach]
 GO

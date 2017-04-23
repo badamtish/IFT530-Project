@@ -11,4 +11,7 @@ AS
 BEGIN
 	INSERT INTO dbo.IndividualAvailability VALUES (@IndividualID, @Date, @Reason)
 END 
+
+GO
+GRANT EXECUTE ON  [dbo].[sp_IndividualAvailability_Insert] TO [dbrole_Player]
 GO

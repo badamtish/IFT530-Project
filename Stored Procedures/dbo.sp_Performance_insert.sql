@@ -13,4 +13,7 @@ set NOCOUNT on
 insert into dbo.performance (IndividualID, CoachID, Comments,Ratings )
 values (@individualID , @coachID , @comments,@ratings )
 end
+
+GO
+GRANT EXECUTE ON  [dbo].[sp_Performance_insert] TO [dbrole_Coach]
 GO

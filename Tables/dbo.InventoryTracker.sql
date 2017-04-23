@@ -12,3 +12,9 @@ ALTER TABLE [dbo].[InventoryTracker] ADD CONSTRAINT [fk_InventoryTracker_Invento
 GO
 ALTER TABLE [dbo].[InventoryTracker] ADD CONSTRAINT [FK_InventoryTrackerIndividualID] FOREIGN KEY ([IndividualID]) REFERENCES [dbo].[Individual] ([IndividualID])
 GO
+GRANT INSERT ON  [dbo].[InventoryTracker] TO [dbrole_Player]
+GO
+GRANT DELETE ON  [dbo].[InventoryTracker] TO [dbrole_Player]
+GO
+GRANT UPDATE ON  [dbo].[InventoryTracker] TO [dbrole_Player]
+GO

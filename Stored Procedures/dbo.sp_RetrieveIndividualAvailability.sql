@@ -16,4 +16,7 @@ BEGIN
 		FROM vw_Inavailability_Coach
 		WHERE CoachID = @IndividualID
 END
+
+GO
+GRANT EXECUTE ON  [dbo].[sp_RetrieveIndividualAvailability] TO [dbrole_Coach]
 GO

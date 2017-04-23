@@ -10,3 +10,9 @@ ALTER TABLE [dbo].[Performance] ADD CONSTRAINT [FK_PerformanceCoachID] FOREIGN K
 GO
 ALTER TABLE [dbo].[Performance] ADD CONSTRAINT [FK_PerformanceIndividualID] FOREIGN KEY ([IndividualID]) REFERENCES [dbo].[Individual] ([IndividualID])
 GO
+GRANT INSERT ON  [dbo].[Performance] TO [dbrole_Coach]
+GO
+GRANT DELETE ON  [dbo].[Performance] TO [dbrole_Coach]
+GO
+GRANT UPDATE ON  [dbo].[Performance] TO [dbrole_Coach]
+GO

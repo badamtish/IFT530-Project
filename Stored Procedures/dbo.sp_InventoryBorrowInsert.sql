@@ -17,4 +17,7 @@ BEGIN
 	ELSE 
 		THROW 51002, 'Invalid borrow parameters. Individual can borrow only one piece per item.', 1
 END 
+
+GO
+GRANT EXECUTE ON  [dbo].[sp_InventoryBorrowInsert] TO [dbrole_Player]
 GO

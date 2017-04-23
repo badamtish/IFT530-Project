@@ -10,4 +10,7 @@ set NOCOUNT on
 DELETE FROM dbo.Schedules 
 WHERE MatchID = @matchID
 end
+
+GO
+GRANT EXECUTE ON  [dbo].[sp_Schedule_delete] TO [dbrole_Coach]
 GO
