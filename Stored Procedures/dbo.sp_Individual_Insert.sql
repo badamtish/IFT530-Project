@@ -10,12 +10,16 @@ CREATE PROCEDURE [dbo].[sp_Individual_Insert]
 @TeamID INT
 AS
 BEGIN
+	DECLARE @Status INT 
 	BEGIN TRY 
 		INSERT INTO dbo.Individual ( FirstName , LastName , DateofBirth , Major , TeamID )
 		VALUES  ( @FirstName, @LastName, @DateOfBirth, @Major, @TeamID)
+		SET @Status = 0
+		RETURN @Status
 	END TRY
 	BEGIN CATCH
-		THROW
+		SET @Status = -1
+		RETURN @Status
 	END CATCH
 END
 GO

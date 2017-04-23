@@ -21,11 +21,11 @@ BEGIN
 	SELECT @FirstName = FirstName, @LastName = LastName, @IndividualID = IndividualID FROM Inserted
 
 	INSERT INTO dbo.IndividualLogin
-	VALUES  ((@IndividualID + SUBSTRING(@FirstName,1,1) + SUBSTRING(@LastName,1,5)), 'temp999', @IndividualID)
+	--VALUES  ((@IndividualID + SUBSTRING(@FirstName,1,1) + SUBSTRING(@LastName,1,5)), 'temp999', @IndividualID, GETDATE())
 	--Or a random password as below. Not sure which one to use.
-	--	VALUES  ((@IndividualID + SUBSTRING(@FirstName,1,1) + SUBSTRING(@LastName,1,5)), SUBSTRING(CAST(NEWID() AS VARCHAR(50)),1,8), @IndividualID)
+	--	VALUES  ((@IndividualID + SUBSTRING(@FirstName,1,1) + SUBSTRING(@LastName,1,5)), SUBSTRING(CAST(NEWID() AS VARCHAR(50)),1,8), @IndividualID, GETDATE())
 	--OR
-	--VALUES  ((@IndividualID + SUBSTRING(@FirstName,1,1) + SUBSTRING(@LastName,1,5)), (SUBSTRING(CAST(NEWID() AS VARCHAR(50)),1,3) + LOWER(SUBSTRING(CAST(NEWID() AS VARCHAR(50)),1,3)) + SUBSTRING(CAST(NEWID() AS VARCHAR(50)),1,4)), @IndividualID)
+	VALUES  ((@IndividualID + SUBSTRING(@FirstName,1,1) + SUBSTRING(@LastName,1,5)), (SUBSTRING(CAST(NEWID() AS VARCHAR(50)),1,3) + LOWER(SUBSTRING(CAST(NEWID() AS VARCHAR(50)),1,3)) + SUBSTRING(CAST(NEWID() AS VARCHAR(50)),1,4)), @IndividualID, GETDATE())
 END 
 
 GO
