@@ -7,13 +7,22 @@ CREATE PROCEDURE [dbo].[sp_Individual_Insert]
 @LastName VARCHAR(20),
 @DateOfBirth DATE,
 @Major VARCHAR(15),
-@TeamID INT
+@TeamID INT,
+@RoleName VARCHAR(15)
 AS
 BEGIN
 	DECLARE @Status INT 
 	BEGIN TRY 
 		INSERT INTO dbo.Individual ( FirstName , LastName , DateofBirth , Major , TeamID )
 		VALUES  ( @FirstName, @LastName, @DateOfBirth, @Major, @TeamID)
+		DECLARE @Roleid INT;
+		DECLARE @IndividualID INT = SCOPE_IDENTITY();
+		SELECT @Roleid = RoleID FROM dbo.Roles WHERE Title = @RoleName;
+		INSERT INTO dbo.IndividualRoles
+		        ( IndividualID, RoleID )
+		VALUES  ( @IndividualID, -- IndividualID - int
+		          @Roleid  -- RoleID - int
+		          )
 		SET @Status = 0
 		RETURN @Status
 	END TRY
