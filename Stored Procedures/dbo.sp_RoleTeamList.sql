@@ -2,9 +2,10 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-CREATE PROC [dbo].[sp_TeamList]
+CREATE PROC [dbo].[sp_RoleTeamList]
 AS
 BEGIN
 	SELECT TeamID, Name FROM dbo.Teams
+	SELECT RoleID, Title FROM dbo.Roles
 END
 GO
